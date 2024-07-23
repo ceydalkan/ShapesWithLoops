@@ -4,7 +4,10 @@ public class Loops {
     static Scanner s = new Scanner(System.in);
 
     public static void main(String[] args) {
+        identityMatrix();
+        productLoop();
         hourglassLoop();
+        CheckerBoard();
     }
 
     public static void identityMatrix() {
@@ -14,11 +17,17 @@ public class Loops {
         int numberOfSecondZeros = numberOfLoops - 1;
 
         for (int i = 1; i <= numberOfLoops; i++) {
+            // leading zeros
             for (int j = 1; j <= numberOfFirstZeros; j++)
                 System.out.print("0");
+
+            // Printing 1
             System.out.print("1");
+
+            // last zeros
             for (int k = 1; k <= numberOfSecondZeros; k++)
                 System.out.print("0");
+
             numberOfFirstZeros++;
             numberOfSecondZeros--;
             System.out.println();
@@ -71,6 +80,26 @@ public class Loops {
             numberOfSpaces--;
             leadingNumber--;
             System.out.println();
+        }
+    }
+
+    public static void CheckerBoard() {
+        System.out.print("Welcome, please enter a number: ");
+        int numberOfStars = s.nextInt();
+        int numberOfRows = numberOfStars;
+
+        boolean doesLeadingSpaceExist = false;
+        for (int i = 1; i <= numberOfRows; i++) {
+            if (doesLeadingSpaceExist)
+                System.out.print(" ");
+
+            for (int j = 1; j <= numberOfStars; j++) {
+                System.out.print("*");
+                System.out.print(" ");
+            }
+
+            System.out.println();
+            doesLeadingSpaceExist = !doesLeadingSpaceExist;
         }
     }
 }
