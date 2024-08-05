@@ -10,6 +10,7 @@ public class Loops {
         CheckerBoard();
     }
 
+    // printing a matrix ac to the input
     public static void identityMatrix() {
         System.out.print("Welcome,please enter a number: ");
         int numberOfLoops = s.nextInt();
@@ -34,6 +35,7 @@ public class Loops {
         }
     }
 
+    // printing products of 8-10-12 and numbers between 2-6
     public static void productLoop() {
         for (int factor1 = 8; factor1 <= 12; factor1 = factor1 + 2) {
             for (int factor2 = 2; factor2 <= 6; factor2++) {
@@ -42,6 +44,7 @@ public class Loops {
         }
     }
 
+    // printing an hourglass with stars and spaces
     public static void hourglassLoop() {
         int numberOfRows = 9;
 
@@ -83,6 +86,7 @@ public class Loops {
         }
     }
 
+    // printing a checkerboard with stars and spaces ac to the input
     public static void CheckerBoard() {
         System.out.print("Welcome, please enter a number: ");
         int numberOfStars = s.nextInt();
